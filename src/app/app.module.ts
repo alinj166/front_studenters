@@ -12,9 +12,10 @@ import { PostServiceOffComponent } from './online/user/post-service-off/post-ser
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfilComponent } from './online/user/profil/profil.component';
 import { EditPostComponent } from './online/user/edit-post/edit-post.component';
-import { ListPostComponent } from './online/user/list-post/list-post.component';
 import { PostServiceDemComponent } from './online/user/post-service-dem/post-service-dem.component';
 import { Error404Component } from './error404/error404.component';
+import { MessagerieComponent } from './online/messagerie/messagerie.component';
+import { EditProfilComponent } from './online/user/edit-profil/edit-profil.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +27,10 @@ import { Error404Component } from './error404/error404.component';
     PostServiceOffComponent,
     ProfilComponent,
     EditPostComponent,
-    ListPostComponent,
     PostServiceDemComponent,
     Error404Component,
+    MessagerieComponent,
+    EditProfilComponent,
     
   ],
   imports: [
