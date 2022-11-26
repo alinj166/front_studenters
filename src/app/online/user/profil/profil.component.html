@@ -79,16 +79,25 @@
 
 
 
-								<div class="container">
+								<div class="container" >
+									<h5 class="form-switch  row justify-content-left">
+										<span> service demandés </span>
+										<input class="form-check-input" type="checkbox" (click)="hidden()" name="hidden1"  id="hidden1" value="ok" >
+
+										
+									</h5>
+									<div [hidden]="hideDem">
 									<div class="row justify-content-center">
 									  <div class="col-12 col-sm-6 col-lg-4">
 										<!-- Section Heading-->
 										<div class="section_heading text-center  " >
-										  <h3>Les Service Demandé </h3>
+										  <h3>Les Service Demandés   </h3>
 										<br>
+													
 										  <div class="line"></div>
 										</div>
 									  </div>
+									  
 									</div>
 									<div class="row">
 									  <!-- Single Advisor-->
@@ -100,7 +109,7 @@
 											<h4>{{l.titre}}</h4>
 											<h6>{{l.description}}</h6>
 											<h5 >{{l.prix}} Tokens</h5>
-											<button class="btn btn-warning btn-circle" title="modifier" [routerLink]="['../edit-service/', 2]">   <i class="fa   fa-pencil"></i></button>
+											<button class="btn btn-warning btn-circle" title="modifier" [routerLink]="['../edit-service-demande/', 2]">   <i class="fa   fa-pencil"></i></button>
 											<button class="btn btn-success btn-circle" title="consulter"><i class="fa fa-eye"></i></button>
 
 											<button title="supprimer" class="btn btn-danger" >
@@ -110,7 +119,9 @@
 									  </div>
 									  
 									</div>
-									<div class="row justify-content-center">
+									</div>
+									<div [hidden]="hideOff">
+									<div class="row justify-content-center" >
 										<div class="col-12 col-sm-6 col-lg-4">
 										  <!-- Section Heading-->
 										  <div class="section_heading text-center  " >
@@ -120,7 +131,7 @@
 										  </div>
 										</div>
 									  </div>
-									<div class="row">
+									<div class="row" >
 										<!-- Single Advisor-->
 										<div class="col-12 col-sm-6 col-lg-4" *ngFor="let l of listServiceOffert; index as i">
 										  <div class="single_advisor_profile  " >
@@ -134,7 +145,7 @@
 											  <h6>{{l.description}}</h6>
 
 											  <h5 >{{l.prix}} Tokens</h5>
-											  <button class="btn btn-warning btn-circle" title="modifier" [routerLink]="['../edit-service/', 2]">   <i class="fa   fa-pencil"></i></button>
+											  <button class="btn btn-warning btn-circle" title="modifier" [routerLink]="['../edit-service-offert/', 2]">   <i class="fa   fa-pencil"></i></button>
 											  <button class="btn btn-success btn-circle" title="consulter"><i class="fa fa-eye"></i></button>
   
 											  <button title="supprimer" class="btn btn-danger" (click)="deleteService('1232412')">
@@ -142,7 +153,7 @@
 											</div>
 										  </div>
 										</div>
-										
+									</div>
 									  </div>
 								  </div>
 
